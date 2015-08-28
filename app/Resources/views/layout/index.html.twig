@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}    
+    <link rel="stylesheet" href="{{ asset("assets/css/bootstrap.min.css") }}">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>    
+    <script src="{{ asset("assets/js/bootstrap.min.js") }}"></script>    
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="pull-right" style="padding: 20px 0 0 0;margin-left: 10px;">
+                <a href="{{ path('dashboard') }}" class="btn btn-primary">Dashboard</a>
+            </div>            
+            <div class="pull-right" style="padding: 20px 0 0 0;">
+                <a href="{{ path('endpoint_input') }}" class="btn btn-primary">Endpoint Input</a>
+            </div>            
+        </div>            
+    </div>
+    <div class="container" style="background-color: #FFF;margin-top: 20px;">
+        {% block container %}{% endblock %}
+    </div>
+{% endblock %}
+
+

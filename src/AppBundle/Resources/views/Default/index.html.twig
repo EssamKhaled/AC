@@ -1,0 +1,22 @@
+{% extends '::layout/index.html.twig' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block container %}
+    <h2>Analytic Service :- Home</h2>
+    <div class="row" style="padding-bottom: 20px;">
+        <div class="col-lg-12">
+            {% if success == false %}
+                <div class="bg-danger" style="padding:20px;">
+                    {{ message }}
+                    <img src="https://placeholdit.imgix.net/~text?w=1&h=1&bg=F00" />
+                </div>
+            {% else %}
+                <div class="bg-success" style="padding:20px;">
+                    {{ message }}
+                    <img src="https://placeholdit.imgix.net/~text?w=1&h=1&bg=" />
+                </div>
+            {% endif %}
+        </div>
+    </div>      
+{% endblock %}
